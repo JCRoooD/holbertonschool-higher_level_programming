@@ -2,9 +2,8 @@
 """This module defines a class Square"""
 
 
-class Square():
+class Square:
     """This class defines a square"""
-    
     def __init__(self, size=0):
         """This method initializes a new instance of Square"""
         if type(size) is not int:
