@@ -2,6 +2,6 @@
 """This module defines a class Square"""
 
     
-class Square:
+class Square():
     """This class defines a square"""
     pass
