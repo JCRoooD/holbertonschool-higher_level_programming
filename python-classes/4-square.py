@@ -4,7 +4,7 @@
 
 class Square:
     """Square class with private attribute instance"""
-    
+
     def __init__(self, size=0):
         """Initialize Square with size attribute"""
         self.__size = size
@@ -13,7 +13,7 @@ class Square:
     def size(self):
         """Getter method to retrieve size"""
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """Setter method to set size"""
@@ -23,7 +23,7 @@ class Square:
             raise ValueError("size must be > 0")
         else:
             self.__size = value
-    
+
     def area(self):
         """Return area of Square"""
         return self.__size ** 2
