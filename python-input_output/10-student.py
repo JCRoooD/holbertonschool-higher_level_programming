@@ -15,7 +15,12 @@ class Student:
         if attrs is not None:
             new_dict = {}
             for x in attrs:
-                if str(x) in self.__dict__:
-                    new_dict[x] = self.__dict__[x]
+                if str(x) == "first_name":
+                    new_dict[x] = self.first_name
+                elif x == "last_name":
+                    new_dict[x] = self.last_name
+                elif x == "age":
+                    new_dict[x] = self.age
             return new_dict
-        return self.__dict__
+        else:
+            return self.__dict__
