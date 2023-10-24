@@ -17,4 +17,3 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-
