@@ -11,5 +11,5 @@ class Rectangle(Base):
     __y = 0
 
     def __init__(self, width, height, x=0, y=0, id=None):
-            """init method rectangle class"""
-            super().__init__(id)
+        """init method rectangle class"""
+        super().__init__(id)
