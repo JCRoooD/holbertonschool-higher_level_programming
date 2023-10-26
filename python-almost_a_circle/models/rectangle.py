@@ -93,20 +93,19 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """Update the rectangle"""
         if args:
-            for i, arg in enumerate(args):
-                if i == 0:
-                    self.id = arg
-                elif i == 1:
-                    self.width = arg
-                elif i == 2:
-                    self.height = arg
-                elif i == 3:
-                    self.x = arg
-                elif i == 4:
-                    self.y = arg
-            else:
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
+            if i >= 1:
+                self.id = args[0]
+            elif i >= 2:
+                self.width = args[1]
+            elif i >= 3:
+                self.height = args[2]
+            elif i >= 4:
+                self.x = args[3]
+            elif i >= 5:
+                self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """returns dictionary representation of rectangle"""

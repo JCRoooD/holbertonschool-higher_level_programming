@@ -52,7 +52,9 @@ class Base:
             dummy = cls(1, 1)
         elif cls.__name__ == "Square":
             dummy = cls(1)
-        cls.update(dummy, **dictionary)
+        else:
+            return None
+        dummy.update(**dictionary)
         return dummy
 
     @classmethod
