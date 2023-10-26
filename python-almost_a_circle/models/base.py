@@ -54,3 +54,16 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """method load from file"""
+        filename = cls.__name__ + ".json"
+        if not path.exists(filename):
+            return []
+        with open (filename) as f:
+            list_dicts = cls.from_json_string(f.read())
+            list_objs = []
+            for dict in list_dicts:
+                list_objs.append(cls.create(**dict))
+            return list_objs
