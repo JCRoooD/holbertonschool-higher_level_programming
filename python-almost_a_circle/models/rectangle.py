@@ -91,9 +91,19 @@ class Rectangle(Base):
                 f"{self.x}/{self.y} - {self.width}/{self.height}")
 
     def update(self, *args, **kwargs):
-            """Update the rectangle"""
-            if args:
-                self.id, self.width, self.height, self.x, self.y = args
+        """Update the rectangle"""
+        if args:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.width = arg
+                elif i == 2:
+                    self.height = arg
+                elif i == 3:
+                    self.x = arg
+                elif i == 4:
+                    self.y = arg
             else:
                 for key, value in kwargs.items():
                     setattr(self, key, value)
