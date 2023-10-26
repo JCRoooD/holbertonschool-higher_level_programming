@@ -44,3 +44,13 @@ class Base:
                 for obj in list_objs:
                     list_dicts.append(obj.to_dictionary())
                 f.write(Base.to_json_string(list_dicts))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """method create"""
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
