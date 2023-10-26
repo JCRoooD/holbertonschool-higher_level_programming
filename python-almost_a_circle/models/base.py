@@ -61,7 +61,7 @@ class Base:
         filename = cls.__name__ + ".json"
         if not path.exists(filename):
             return []
-        with open (filename) as f:
+        with open(filename) as f:
             list_dicts = cls.from_json_string(f.read())
             list_objs = []
             for dict in list_dicts:
