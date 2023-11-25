@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that lists all State objects from the database hbtn_0e_6_usa"""
+"""listing all states from database"""
 
 from sys import argv
 from sqlalchemy import create_engine
