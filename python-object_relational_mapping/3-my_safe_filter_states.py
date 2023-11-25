@@ -13,7 +13,7 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     search = "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id"
-    state_name = (argv[4])
+    state_name = (argv[4], )
 
     cur.execute(search, state_name)
 
